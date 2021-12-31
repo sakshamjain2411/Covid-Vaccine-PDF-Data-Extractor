@@ -1,92 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pdf Data Extractor</title>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.6.347/pdf.worker.entry.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.10.100/pdf.worker.min.js"></script>
-    <script src="main.js"></script>
-</head>
-
-<body>
+    <title>Covid Vaccine Pdf Data Extractor</title>
+  </head>
+  <body>
     <section>
-        <input type="file" id="file-id" name="file_name" onchange="ExtractText();">
-        <div id="output" style="display: none;"></div>
-        <button onclick="getExtractedData()" class="btn-secondary">Extract Data</button>
-
-        <div class="formContainer">
-            <div class="closeButton">
-                <button onclick="pageRefresh()">X</button>
-            </div>
-            <form action="" method="POST" class="form">
-                <table>
-                    <tr>
-                        <th>Certificate No:</th>
-                        <td><input type="text" name="Name" id="CertificateNo" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>NID Number:</th>
-                        <td><input type="text" name="Name" id="NIDNumber" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Passport Number:</th>
-                        <td><input type="text" name="Name" id="PassportNumber" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Country:</th>
-                        <td><input type="text" name="Name" id="Country" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Name:</th>
-                        <td><input type="text" name="Name" id="Name" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>DOB:</th>
-                        <td><input type="text" name="Name" id="DOB" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Gender:</th>
-                        <td><input type="text" name="Name" id="Gender" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Date of First Dose:</th>
-                        <td><input type="text" name="Name" id="DateOfFirstDose" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Name of First Dose:</th>
-                        <td><input type="text" name="Name" id="NameOfVaccineDose1" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Date of Second Dose:</th>
-                        <td><input type="text" name="Name" id="DateOfSecondDose" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Name of Second Dose:</th>
-                        <td><input type="text" name="Name" id="NameOfVaccineDose2" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Vaccination Center:</th>
-                        <td><input type="text" name="Name" id="VaccinationCenter" value=""></td>
-                    </tr>
-                    <tr>
-                        <th>Dose By:</th>
-                        <td><input type="text" name="Name" id="DoseBy" value=""></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <button type="submit" class="btn-primary">Upload Data</button>
-                        </td>
-                    </tr>
-                </table>
-            </form>
+        <div class="box">
+            <select class="form-select" aria-label="Default select example" onchange="navigate()">
+                <option selected>Select Country</option>
+                <option value="India">India</option>
+                <option value="Bangladesh">Bangladesh</option>
+              </select>
         </div>
     </section>
-</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
